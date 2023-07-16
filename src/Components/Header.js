@@ -1,22 +1,22 @@
 import React from 'react';
+import { Navbar, Container} from 'react-bootstrap'
+
 
 
 
 const Header = () => {
     return (
-      <header>
-        <h1>Shelter Pet Management Form</h1>
-        <hr />
-        <div className="links">
-          <NavLink to="/" className="link" activeClassName="active" exact>
-            Pet List
-          </NavLink>
-          <NavLink to="/add" className="link" activeClassName="active">
-            Add Pet
-          </NavLink>
-        </div>
-      </header>
-    );
-  };
+      <>
+      <Navbar bg="dark" expand="sm" variant="dark">
+        <Container>
+          <Navbar.Brand href="/">Manage Shelter Pets</Navbar.Brand>
+         <img src={process.env.PUBLIC_URL + '/images/catdog.jpg'}/>
+        </Container>
+      </Navbar>
+      </>
   
-  export default Header;
+    )
+}
+ 
+    export default Header
+   
